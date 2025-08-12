@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDL Web UI</title>
+    <style>
+      body { font-family: sans-serif; }
+      .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+      #output { background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc; white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>EDL Web UI</h1>
+      <form action="/run" method="post">
+        <p>
+          <label for="command">Enter command:</label><br>
+          <input type="text" id="command" name="command" size="50">
+        </p>
+        <p><input type="submit" value="Run Command"></p>
+      </form>
+      {% if output %}
+      <h2>Output:</h2>
+      <pre id="output">{{ output }}</pre>
+      {% endif %}
+    </div>
+  </body>
+</html>

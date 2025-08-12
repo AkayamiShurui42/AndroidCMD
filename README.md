@@ -159,6 +159,22 @@ to get back the 0x9008 mode :
    ```edl rawxml "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><data><response value=\"ACK\" /></data>```
 - ```edl [anycommand] --debugmode``` -> enables Verbose. Do that only when REALLY needed as it will print out everything happening!
 
+### Web Interface
+
+This tool includes a web interface to allow for easy use from any device with a web browser. To use it, first install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then, launch the web server:
+
+```bash
+./edl web
+```
+
+You can then access the web interface by navigating to `http://<server_ip>:5000` in your web browser.
+
 ### For EMMC Flash
 
 - ```edl printgpt``` -> to print gpt on device with emmc
