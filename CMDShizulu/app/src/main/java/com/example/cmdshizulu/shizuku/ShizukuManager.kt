@@ -21,7 +21,7 @@ object ShizukuManager {
     }
 
     fun requestShizukuPermission(requestCode: Int) {
-        if (!hasShizukuPermission()) {
+        if (!Shizuku.isPreV11() && Shizuku.checkSelfPermission() != PackageManager.PERMISSION_GRANTED) {
             Shizuku.requestPermission(requestCode)
         }
     }
