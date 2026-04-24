@@ -5,6 +5,12 @@
     <!-- Shizuku permissions -->
     <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
 
+    <!-- System & Storage Permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions" />
+
     <application android:name=".core.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
